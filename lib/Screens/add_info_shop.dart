@@ -86,7 +86,7 @@ class _AddInfoShopState extends State<AddInfoShop> {
   }
 
   Widget showMap() {
-    return Container(
+    return SizedBox(
       height: 300,
       child: FlutterMap(
         options: MapOptions(
@@ -128,7 +128,7 @@ class _AddInfoShopState extends State<AddInfoShop> {
           },
           icon: Icon(Icons.add_a_photo, size: 36.0),
         ),
-        Container(
+        SizedBox(
           width: 250.0,
           child: Image.asset('images/myimage.png', fit: BoxFit.cover),
         ),

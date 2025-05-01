@@ -71,7 +71,7 @@ class _SignInState extends State<SignIn> {
     );
   }
 
-  Widget loginButton() => Container(
+  Widget loginButton() => SizedBox(
     width: 250.0,
     child: ElevatedButton(
       onPressed: () {
@@ -99,7 +99,6 @@ class _SignInState extends State<SignIn> {
       Response response = await Dio().get(url);
       print('Response statusCode => ${response.statusCode}');
       print('Response body => ${response.data}');
-      ;
 
       if (response.data == null || response.data.toString() == 'null') {
         setState(() {
@@ -172,7 +171,7 @@ class _SignInState extends State<SignIn> {
     Navigator.pushAndRemoveUntil(context, route, (route) => false);
   }
 
-  Widget userForm() => Container(
+  Widget userForm() => SizedBox(
     width: 250.0,
     child: TextFormField(
       onChanged: (value) => user = value.trim(),
@@ -196,7 +195,7 @@ class _SignInState extends State<SignIn> {
     ),
   );
 
-  Widget passwordForm() => Container(
+  Widget passwordForm() => SizedBox(
     width: 250.0,
     child: TextFormField(
       onChanged: (value) => password = value.trim(),

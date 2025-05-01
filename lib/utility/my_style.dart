@@ -30,7 +30,7 @@ class MyStyle {
 
   Widget titleCenter(BuildContext context, String string) {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.5,
         child: Text(
           string,
@@ -64,7 +64,7 @@ class MyStyle {
       );
 
   Container showLogo() {
-    return Container(
+    return SizedBox(
       width: 120.0,
       child: Image.asset('images/logo.png'),
     );
